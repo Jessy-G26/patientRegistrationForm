@@ -300,22 +300,6 @@
             break;
           }
         }
-
-        let patientRecord = {
-          id: Date.now(),
-          firstName: document.getElementById("fName").value,
-          middleName: document.getElementById("mName").value,
-          lastName: document.getElementById("lName").value,
-          address: document.getElementById("inputAddress").value,
-          birthDate: document.getElementById("bDate").value,
-          contactNumber: document.getElementById("contactNumber").value,
-          gender: gen,
-          medicalHistory: chkValue,
-          currentSymptoms: currSymptoms,
-          takingMedications: tm,
-          ifYes: document.getElementById("distxt").value,
-        };
-
         patientRecords.push(patientRecord);
         console.table(patientRecords);
         localStorage.setItem("patientRecord", JSON.stringify(patientRecords));
